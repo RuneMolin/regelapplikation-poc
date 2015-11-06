@@ -1,6 +1,7 @@
 package dk.skat.regelapp;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
@@ -8,6 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  * @author Rune Molin, rmo@nine.dk
  */
 @Configuration
+@EnableWebMvc
 public class MvcConfig extends WebMvcConfigurerAdapter {
 
     @Override

@@ -53,8 +53,8 @@ jar {
 
 compileJava {
     options.encoding = 'utf-8'
-    targetCompatibility = '1.7'
-    sourceCompatibility = '1.7'
+    targetCompatibility = '1.8'
+    sourceCompatibility = '1.8'
 }
 
 repositories {
@@ -66,6 +66,7 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-starter-undertow'
     compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    //compile 'org.springframework.boot:spring-boot-starter-security'
 
     compile 'net.sourceforge.nekohtml:nekohtml:1.9.21'
 
