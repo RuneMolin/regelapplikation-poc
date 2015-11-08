@@ -23,9 +23,11 @@ public class ConfigSecurity extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("/webjars/**").permitAll().anyRequest().authenticated();
+        http.authorizeRequests().antMatchers("/", "/webjars/**", "/css/**").permitAll();
+        http.authorizeRequests().anyRequest().authenticated();
 
-        http.formLogin()
+        http
+                .formLogin()
                 .loginPage("/login")
                 .failureUrl("/login?error")
                 .permitAll()
