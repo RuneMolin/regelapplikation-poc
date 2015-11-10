@@ -14,11 +14,17 @@ repositories {
 
 apply plugin: 'groovy'
 apply plugin: 'spring-boot'
+apply plugin: 'jacoco'
 
 compileJava {
     options.encoding = 'utf-8'
     targetCompatibility = '1.8'
     sourceCompatibility = '1.8'
+}
+
+jacoco {
+    toolVersion = "0.7.5.201505241946"
+    reportsDir = file("$buildDir/customJacocoReportDir")
 }
 
 dependencies {
