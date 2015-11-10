@@ -24,7 +24,6 @@ compileJava {
 
 jacoco {
     toolVersion = "0.7.5.201505241946"
-    reportsDir = file("$buildDir/customJacocoReportDir")
 }
 
 dependencies {
