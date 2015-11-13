@@ -1,4 +1,4 @@
-package dk.skat.regelapp;
+package dk.skat.regelapp.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

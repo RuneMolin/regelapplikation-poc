@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Regelapplikationen - Kontoplan</title>
+
+    <link rel="stylesheet"
+          href="http://cdn.jsdelivr.net/webjars/bootswatch-spacelab/3.3.2/css/bootstrap.min.css"
+          th:href="@{/webjars/bootswatch-spacelab/3.3.2/css/bootstrap.min.css}"/>
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Konto</th>
+                    <th>Navn</th>
+                    <th>Debet</th>
+                    <th>Kredit</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="konto: ${konti}">
+                    <td th:text="${konto.nummer}"></td>
+                    <td th:text="${konto.navn}"></td>
+                    <td th:text="${konto.debet} ? 'X':''"></td>
+                    <td th:text="${konto.kredit} ? '':'X'"></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

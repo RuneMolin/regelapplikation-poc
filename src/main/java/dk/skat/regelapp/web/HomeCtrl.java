@@ -1,4 +1,4 @@
-package dk.skat.regelapp;
+package dk.skat.regelapp.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author Rune Molin, rmo@nine.dk
  */
 @Controller
-public class SecretCtrl {
+public class HomeCtrl {
 
-    @RequestMapping("/secret")
-    public String secret() {
-        return "secret";
+    @RequestMapping("/")
+    public String index() {
+        return "index";
     }
 }
