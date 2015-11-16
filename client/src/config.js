@@ -9,6 +9,7 @@ System.config({
 
 System.config({
   "map": {
+    "angular": "github:angular/bower-angular@1.4.7",
     "bootstrap": "github:twbs/bootstrap@3.3.4",
     "jquery": "github:components/jquery@2.1.3",
     "less": "github:aaike/jspm-less-plugin@0.0.5",
