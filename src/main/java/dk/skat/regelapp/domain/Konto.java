@@ -2,6 +2,7 @@ package dk.skat.regelapp.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
@@ -10,6 +11,10 @@ import javax.persistence.Id;
 @Entity
 public class Konto {
     @Id
+    @GeneratedValue
+    private Long id;
+
+    @Column(nullable = false)
     private Integer nummer;
 
     @Column(nullable = false)
@@ -30,6 +35,11 @@ public class Konto {
         this.navn = navn;
         this.debet = debet;
         this.kredit = kredit;
+    }
+
+
+    public Long getId() {
+        return id;
     }
 
     public Integer getNummer() {

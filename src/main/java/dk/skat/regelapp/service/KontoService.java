@@ -21,4 +21,8 @@ public class KontoService {
     public Iterable<Konto> alleKonti() {
         return kontoRepository.findAll();
     }
+
+    public void slet(Konto konto) {
+        kontoRepository.delete(konto);
+    }
 }

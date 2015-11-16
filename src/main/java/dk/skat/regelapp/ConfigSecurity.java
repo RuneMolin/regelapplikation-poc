@@ -23,7 +23,7 @@ public class ConfigSecurity extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("/", "/webjars/**", "/css/**","/js/**").permitAll();
+        http.authorizeRequests().antMatchers("/", "/webjars/**", "/css/**","/js/**","/fragments/**").permitAll();
         http.authorizeRequests().anyRequest().authenticated();
 
         http
