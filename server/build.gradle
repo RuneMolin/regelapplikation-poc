@@ -1,0 +1,44 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.2.7.RELEASE"
+    }
+}
+
+repositories {
+    jcenter()
+}
+
+apply plugin: 'groovy'
+apply plugin: 'spring-boot'
+apply plugin: 'jacoco'
+
+compileJava {
+    options.encoding = 'utf-8'
+    targetCompatibility = '1.8'
+    sourceCompatibility = '1.8'
+}
+
+jar {
+  baseName = 'regelapplikationen'
+  version = '0.1.0.BUILD-SNAPSHOT'
+}
+
+jacoco {
+    toolVersion = "0.7.5.201505241946"
+}
+
+dependencies {
+    compile project(':client')
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-security'
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    testCompile 'org.spockframework:spock-core:1.0-groovy-2.3'
+    testCompile 'org.codehaus.groovy:groovy-all:2.3.10'
+
+    runtime 'mysql:mysql-connector-java:5.1.37'
+}
